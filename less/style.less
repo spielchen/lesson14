@@ -1,0 +1,62 @@
+
+@font-face {
+	font-family: 'LCD';
+	src: url('../fonts/LCDITC-Normal.eot');
+	src: url('../fonts/LCDITC-Normal.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/LCDITC-Normal.woff2') format('woff2'),
+		url('../fonts/LCDITC-Normal.woff') format('woff'),
+		url('../fonts/LCDITC-Normal.ttf') format('truetype'),
+		url('../fonts/LCDITC-Normal.svg#LCDITC-Normal') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'LCD';
+}
+.slider{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	padding: 0;
+}
+.item{
+	height: 100vh;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	flex-basis: 25%;
+	transition:all .2s;
+	&:hover{
+		flex-basis:100%;
+	}
+	&-1{
+		background: url('../img/bgr.jpg');
+		background-size: cover;
+	}
+	&-2{
+		background: url('../img/item.jpg') center center;
+		background-size: cover;
+	}
+	span{
+		font-size: 80px;
+		color:#fff;
+		text-shadow: 0px 0px 5px #fff, 0px 0px 10px #95c3e9, 0px 0px 15px #95c3e9,0px 0px 20px #95c3e9, 0px 0px 25px #95c3e9, 0px 0px 30px #95c3e9;
+	}
+}
+@media(max-width: 640px){
+	.slider{
+		height: 100vh;
+		flex-flow: column;
+	}
+	.item{
+		width: 100%;
+		&:hover{
+			flex-grow:30%;
+		}
+	}
+}
